@@ -14,6 +14,40 @@ int validateInput(int input) {
 // this sucks dude
 
 // Find all valid combinations of multiples, check againts point value.
+// the pyramids of egypt look great despite their age
+
+/*
+      _
+|-------\__
+|-------/  `-.
+|      |      `.
+|      |        )
+|      |      <
+|      |        )
+|-------\     .'
+|-------/    /
+|       `-.  \
+|          \  \
+|           \  \
+|           (  o)
+|            \_/
+|     _
+|-------\__
+|-------/  `-.
+|      |      `.
+|      |        )
+|      |      <
+|      |        )
+|-------\     .'
+|-------/    /
+|       `-.  \
+|          \  \
+|           \  \
+|           (  o)
+|            \_/
+|
+|            v   the great pyramid of findCombinations
+*/
 void findCombinations(int score) {
     for (int t = 0; t * 6 <= score; t++) { // touchdowns
         for (int f = 0; f * 3 <= score; f++) { // field goals
@@ -33,20 +67,25 @@ void findCombinations(int score) {
 
 
 int main(void) {
+
+    // get initial user input
     int input = -1;
     printf("Please enter a score (1 to exit): ");
     scanf("%d", &input);
 
+    // keep getting new input until valid
     while ( !validateInput(input) ) {
         printf("Invalid input. Please try again.\n");
         scanf("%d", &input);
     }
 
+    // check for exit input
     if (input == 1) {
         printf("Exiting...");
         return 0;
     }
 
+    // visit the pyramids (print valid combinations for the input)
     findCombinations(input);
 
     return 0;
