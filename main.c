@@ -5,7 +5,7 @@
 
 // validate input is >= 0
 int validateInput(int input) {
-   if (input >= 0) {
+   if (input >= 1) {
        return 1;
    }
    return 0;
@@ -13,14 +13,15 @@ int validateInput(int input) {
 
 int main(void) {
     int input = -1;
-    printf("Please enter a score: ");
+    printf("Please enter a score (1 to exit): ");
     scanf("%d", &input);
 
     while ( !validateInput(input) ) {
         printf("Invalid input. Please try again.\n");
         scanf("%d", &input);
     }
-    if (input == 0) {
+    if (input == 1) {
+        printf("Exiting...");
         return 0;
     }
     return 0;
