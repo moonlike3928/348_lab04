@@ -95,7 +95,7 @@ int main () {
     char convertScale;
 
     while (1) {
-        printf("\nEnter the temperature value: ");
+        printf("Enter the temperature value: ");
         if (scanf("%lf", &temperatureValue) != 1) {
             if (feof(stdin)) {
                 return 1;
